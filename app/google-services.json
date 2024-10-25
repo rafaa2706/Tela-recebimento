@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "953159133661",
+    "project_id": "recebimentos-39875",
+    "storage_bucket": "recebimentos-39875.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:953159133661:android:78d6fd917dee6c2d14ee34",
+        "android_client_info": {
+          "package_name": "com.palazzo.recebimentos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsqNYG7rU0Rd0J1KrOu09eXqUfjTk0dfA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

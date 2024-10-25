@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.palazzo.recebimentos.TelaInformacaoActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar5"
+        android:layout_width="0dp"
+        android:layout_height="37dp"
+        android:background="#800000 "
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/toolbar5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarInformacao"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="132dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/archivo_black"
+            android:gravity="center"
+            android:text="UV-R"
+            android:textSize="28dp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="126dp"
+            android:layout_height="121dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/uva" />
+
+        <LinearLayout
+            android:layout_width="274dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:background="@drawable/fundo_borda_redonda"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="0dp"
+                android:text="Estoque atual:"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                tools:layout_editor_absoluteX="40dp"
+                tools:layout_editor_absoluteY="276dp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="58dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:text="0"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="274dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/fundo_borda_redonda"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewStatus"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Estoque minimo:"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                tools:layout_editor_absoluteX="40dp"
+                tools:layout_editor_absoluteY="276dp" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="58dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:text="0"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutInformacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/textViewMaterialArmazenado">
+
+
+            <TextView
+                android:id="@+id/textViewFornecedor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="Fornecedor"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textViewLoteInformacao"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="Lote"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textViewDataEntrega"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="Data Entrega"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textViewStatusInformacao"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="Status"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/listViewInformacao"
+            android:layout_width="match_parent"
+            android:layout_height="183dp" />
+
+<!--        <TableLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="30dp"-->
+<!--            android:layout_marginTop="25dp"-->
+<!--            android:layout_marginRight="30dp"-->
+<!--            android:stretchColumns="*">-->
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:background="@color/black" />
+
+<!--            <TableRow>-->
+
+<!--                <TextView-->
+<!--                    style="@style/TableCell"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Fornecedor"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <TextView-->
+<!--                    style="@style/TableCell"-->
+<!--                    android:layout_width="13dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Lote"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <TextView-->
+<!--                    style="@style/TableCell"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Estoque"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <TextView-->
+<!--                    style="@style/TableCell"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Status"-->
+<!--                    android:textStyle="bold" />-->
+<!--            </TableRow>-->
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:background="@color/black" />
+
+<!--            <TableRow>-->
+
+<!--                <TextView-->
+<!--                    style="@style/TableCell"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="AzGrap" />-->
+
+<!--                <TextView-->
+<!--                    style="@style/TableCell"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="1051" />-->
+
+<!--                <TextView-->
+<!--                    style="@style/TableCell"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="20-dez-2023" />-->
+
+<!--                <TextView-->
+<!--                    style="@style/TableCell"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="" />-->
+<!--            </TableRow>-->
+
+<!--            <View-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="2dp"-->
+<!--                android:background="@color/black" />-->
+
+<!--            <TableRow>-->
+
+<!--                <TextView-->
+<!--                    style="@style/TableCell"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="AzGrap" />-->
+
+<!--                <TextView-->
+<!--                    style="@style/TableCell"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="1660" />-->
+
+<!--                <TextView-->
+<!--                    style="@style/TableCell"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="16-dez-2023" />-->
+
+<!--                <TextView-->
+<!--                    style="@style/TableCell"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="" />-->
+<!--            </TableRow>-->
+
+<!--            <View-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="2dp"-->
+<!--                android:background="@color/black" />-->
+
+<!--            <TableRow>-->
+
+<!--                <TextView-->
+<!--                    style="@style/TableCell"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="UVABR" />-->
+
+<!--                <TextView-->
+<!--                    style="@style/TableCell"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="1659" />-->
+
+<!--                <TextView-->
+<!--                    style="@style/TableCell"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="09-dez-2023" />-->
+
+<!--                <TextView-->
+<!--                    style="@style/TableCell"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="" />-->
+<!--            </TableRow>-->
+
+<!--            <View-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="2dp"-->
+<!--                android:background="@color/black" />-->
+
+<!--            <TableRow>-->
+
+<!--                <TextView-->
+<!--                    style="@style/TableCell"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="UVABR" />-->
+
+<!--                <TextView-->
+<!--                    style="@style/TableCell"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="2345" />-->
+
+<!--                <TextView-->
+<!--                    style="@style/TableCell"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="30-nov-2023" />-->
+
+<!--                <TextView-->
+<!--                    style="@style/TableCell"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="" />-->
+<!--            </TableRow>-->
+
+            <View
+                android:layout_width="10dp"
+                android:layout_height="2dp"
+                android:background="@color/black" />
+
+
+<!--        </TableLayout>-->
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarInformacao"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="#800000 "
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="INFORMAÇÕES DO PRODUTO"
+        app:titleTextColor="#FFFFFF" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
